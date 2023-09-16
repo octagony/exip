@@ -1,14 +1,22 @@
 import axios from "axios";
-import { IpAddress } from "~/types/ip.interface";
+import { IpAddress, IpInfo } from "~/types/ip.interface";
 
 export class IPSerivce {
-  constructor() {}
-
   async getIPAddress() {
-    const ipAddress = await axios.get<IpAddress>(
+    const getIpAddress = await axios.get<IpAddress>(
       "https://api.ipify.org/?format=json",
     );
-    return ipAddress.data;
+    return getIpAddress.data;
+  }
+
+  async getIPInfo() {
+    const ipAddress = await this.getIPAddress().then((data) => data);
+    const ipInfo = await axios.get<IpInfo>(
+      `https://ipguru.io/api/ping/?access_key=${
+        import.meta.env.VITE_API_KEY
+      }&ip_address=${ipAddress.ip}`,
+    );
+    return ipInfo.data;
   }
 }
 
