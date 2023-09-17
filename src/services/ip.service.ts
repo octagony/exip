@@ -11,9 +11,9 @@ export class IPSerivce {
   async getIPInfo() {
     const ipAddress = await this.getIPAddress().then((data) => data);
     const ipInfo = await axios.get<IpInfo>(
-      `${RequestAddresses.IPGURU}/?access_key=${
+      `${RequestAddresses.IPAPI}/?q=${ipAddress.ip}&key=${
         import.meta.env.VITE_API_KEY
-      }&ip_address=${ipAddress.ip}`,
+      }`,
     );
     return ipInfo.data;
   }

@@ -4,33 +4,62 @@ export interface IpAddress {
 
 export interface IpInfo {
   ip: string;
-  ip_type: string;
-  continent_code: string;
-  continent_name: string;
-  country_code: string;
-  country_name: string;
-  region_code: string;
-  region_name: string;
-  city: string;
-  zip: string;
-  latitude: number;
-  longitude: number;
+  rir: string;
+  is_bogon: boolean;
+  is_mobile: boolean;
+  is_datacenter: boolean;
+  is_tor: boolean;
+  is_proxy: boolean;
+  is_vpn: boolean;
+  is_abuser: boolean;
+  company: Company;
+  datacenter: Datacenter;
+  asn: Asn;
   location: Location;
+  elapsed_ms: number;
+}
+
+export interface Asn {
+  asn: number;
+  route: string;
+  descr: string;
+  country: string;
+  active: boolean;
+  org: string;
+  domain: string;
+  abuse: string;
+  type: string;
+  created: Date;
+  updated: Date;
+  rir: string;
+  whois: string;
+}
+
+export interface Company {
+  name: string;
+  domain: string;
+  type: string;
+  network: string;
+  whois: string;
+}
+
+export interface Datacenter {
+  datacenter: string;
+  domain: string;
+  network: string;
 }
 
 export interface Location {
-  is_eu: boolean;
-  capital: string;
-  languages: Language[];
-  geoname_id: number;
-  calling_code: string;
-  country_flag: string;
-  country_flag_emoji: string;
-  country_flag_emoji_unicode: string;
-}
-
-export interface Language {
-  code: string;
-  name: string;
-  native: string;
+  continent: string;
+  country: string;
+  country_code: string;
+  state: string;
+  city: string;
+  latitude: number;
+  longitude: number;
+  zip: string;
+  timezone: string;
+  local_time: Date;
+  local_time_unix: number;
+  is_dst: boolean;
 }
