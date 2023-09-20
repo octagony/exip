@@ -1,9 +1,9 @@
-import { Box, CircularProgress, LinearProgress, Stack } from "@suid/material";
+import { Grid, Skeleton } from "@suid/material";
 
 export default function Loader() {
-  return (
-    <Box sx={{ width: "100%", marginBlock: "1rem" }}>
-      <LinearProgress color="primary" />
-    </Box>
-  );
+	return (
+		<Grid container justifyContent="center">
+			<Skeleton variant="rectangular" width={"80%"} height={490} />
+		</Grid>
+	);
 }

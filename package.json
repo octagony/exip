@@ -27,6 +27,8 @@
     "vitest": "^0.26.3"
   },
   "dependencies": {
+    "@fontsource-variable/overpass": "^5.0.9",
+    "@fontsource/ubuntu": "^5.0.8",
     "@suid/icons-material": "^0.6.9",
     "@suid/material": "^0.14.2",
     "@suid/vite-plugin": "^0.1.4",
