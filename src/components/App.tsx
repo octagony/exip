@@ -8,21 +8,26 @@ import { IpInfo } from "~/types/ip.interface";
 import Header from "./Header/Header";
 import IpAddress from "./IpAddress/IpAddress";
 import Loader from "./Loader/Loader";
+import ExtraInfo from "./ExtraInfo/ExtraInfo";
+import { Container } from "@suid/material";
 
 export default function App() {
 	const [ipInfo, setIpInfo] = createSignal<IpInfo>();
 	const test = true;
 	createEffect(async () => {
-		const ip = await IPSerivce.getIPInfo().then(data => data);
+		// const ip = await IPSerivce.getIPInfo().then(data => data);
 		// setIpInfo(ip);
 	}, []);
 
 	return (
 		<>
 			<Header />
-			<Show when={test} fallback={() => <Loader />}>
-				<IpAddress />
-			</Show>
+			<Container>
+				<Show when={test} fallback={() => <Loader />}>
+					<IpAddress />
+					<ExtraInfo />
+				</Show>
+			</Container>
 		</>
 	);
 }

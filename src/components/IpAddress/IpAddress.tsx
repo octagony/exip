@@ -10,7 +10,8 @@ export default function IpAddress() {
 			mt={4}
 			marginInline={"auto"}
 			borderRadius={3}
-			p={2}
+			px={8}
+			py={2}
 		>
 			<Typography variant="h5" color="common.white">
 				Your API Address:
