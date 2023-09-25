@@ -1,39 +1,38 @@
 {
-  "name": "exip",
-  "scripts": {
-    "dev": "solid-start dev",
-    "build": "solid-start build",
-    "start": "solid-start start",
-    "test": "vitest run",
-    "test-watch": "vitest",
-    "test-ui": "vitest --ui",
-    "coverage": "vitest run --coverage"
-  },
-  "type": "module",
-  "devDependencies": {
-    "@solidjs/meta": "^0.28.6",
-    "@solidjs/router": "^0.8.3",
-    "@solidjs/testing-library": "^0.5.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@types/testing-library__jest-dom": "^5.14.9",
-    "@vitest/coverage-c8": "^0.26.3",
-    "@vitest/ui": "^0.26.3",
-    "jsdom": "^20.0.3",
-    "solid-js": "^1.7.11",
-    "solid-start": "^0.3.5",
-    "solid-start-node": "^0.3.5",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9",
-    "vitest": "^0.26.3"
-  },
-  "dependencies": {
-    "@fontsource-variable/overpass": "^5.0.9",
-    "@fontsource/ubuntu": "^5.0.8",
-    "@suid/icons-material": "^0.6.9",
-    "@suid/material": "^0.14.2",
-    "@suid/vite-plugin": "^0.1.4",
-    "axios": "^1.5.0",
-    "solid-icons": "^1.0.12",
-    "vite-plugin-solid": "^2.7.0"
-  }
+	"name": "exip",
+	"scripts": {
+		"dev": "solid-start dev",
+		"build": "solid-start build",
+		"start": "solid-start start",
+		"test": "vitest run",
+		"test-watch": "vitest",
+		"test-ui": "vitest --ui",
+		"coverage": "vitest run --coverage"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@solidjs/meta": "^0.28.6",
+		"@solidjs/router": "^0.8.3",
+		"@solidjs/testing-library": "^0.5.2",
+		"@testing-library/jest-dom": "^5.17.0",
+		"@types/testing-library__jest-dom": "^5.14.9",
+		"@vitest/coverage-c8": "^0.26.3",
+		"@vitest/ui": "^0.26.3",
+		"jsdom": "^20.0.3",
+		"solid-js": "^1.7.11",
+		"solid-start": "^0.3.5",
+		"solid-start-node": "^0.3.5",
+		"typescript": "^5.2.2",
+		"vite": "^4.4.9",
+		"vitest": "^0.26.3"
+	},
+	"dependencies": {
+		"@fontsource/ubuntu": "^5.0.8",
+		"@suid/icons-material": "^0.6.9",
+		"@suid/material": "^0.14.2",
+		"@suid/vite-plugin": "^0.1.4",
+		"axios": "^1.5.0",
+		"solid-icons": "^1.0.12",
+		"vite-plugin-solid": "^2.7.0"
+	}
 }

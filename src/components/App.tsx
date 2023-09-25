@@ -10,6 +10,7 @@ import IpAddress from "./IpAddress/IpAddress";
 import Loader from "./Loader/Loader";
 import ExtraInfo from "./ExtraInfo/ExtraInfo";
 import { Container } from "@suid/material";
+import Map from "./Map/Map";
 
 export default function App() {
 	const [ipInfo, setIpInfo] = createSignal<IpInfo>();
@@ -26,6 +27,7 @@ export default function App() {
 				<Show when={test} fallback={() => <Loader />}>
 					<IpAddress />
 					<ExtraInfo />
+					<Map />
 				</Show>
 			</Container>
 		</>

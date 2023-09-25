@@ -4,7 +4,7 @@ import { AiFillGithub } from "solid-icons/ai";
 export default function Header() {
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position="static">
+			<AppBar position="static" sx={{ borderRadius: "1rem" }}>
 				<Toolbar>
 					<Typography
 						variant="h1"
